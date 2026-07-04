@@ -1,148 +1,205 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HTML Day Berlin 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Day Berlin 2026</title>
 
-  <style>
+<style>
 
-
-    .nav {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 10;
-    }
-
-    .nav a {
-      color: greenyellow;
-    }
-
-    .content {
-      position: relative;
-      /* margin-top: 120px; */
-      min-height: 700px;
-      cursor: pointer;
-    }
-
-    .content section {
-      position: absolute;
-      left: 0;
-      top: 0;
-      max-width: 700px;
-      transition: transform 0.7s ease;
-    }
-
-    h1 {
- 
-      line-height: 0.9;
-      color: chartreuse;
-    }
-
-    h3 {
- 
-      margin: 0;
-      font-weight: 400;
-    }
-
-    p {
-
-      line-height: 1.25;
-      margin-top: 10px;
-    }
-
-    /* 처음 겹친 위치 */
-    .content section:nth-child(1) { transform: translate(0px, 0px); }
-    .content section:nth-child(2) { transform: translate(0px, 0px); }
-    .content section:nth-child(3) { transform: translate(0px, 0px); }
-    .content section:nth-child(4) { transform: translate(0px, 0px); }
-    .content section:nth-child(5) { transform: translate(0px, 0px); }
-    .content section:nth-child(6) { transform: translate(0px, 0px); }
-
-    /* hover / touch 후 펼쳐짐 */
-   .content:hover section:nth-child(1),
-.content.open section:nth-child(1){
-    transform: translate(0, 0);
+body{
+    margin:20px;
+    font-family:serif;
 }
 
-.content:hover section:nth-child(2),
-.content.open section:nth-child(2){
-    transform: translate(0, 70px);
+.wrap{
+    position:relative;
+    cursor:pointer;
+    min-height:800px;
 }
 
-.content:hover section:nth-child(3),
-.content.open section:nth-child(3){
-    transform: translate(0, 140px);
+h1{
+    margin:0;
+    color:rgb(0, 0, 0);
+    /* font-size:56px; */
+    line-height:1;
 }
 
-.content:hover section:nth-child(4),
-.content.open section:nth-child(4){
-    transform: translate(0, 210px);
+.nav{
+    margin:10px 0 40px;
 }
 
-.content:hover section:nth-child(5),
-.content.open section:nth-child(5){
-    transform: translate(0, 280px);
+.nav a{
+    color:greenyellow;
 }
 
-.content:hover section:nth-child(6),
-.content.open section:nth-child(6){
-    transform: translate(0, 350px);
+.content{
+    position:relative;
+    min-height:700px;
 }
-  </style>
+
+.content section{
+    position:absolute;
+    left:0;
+    top:0;
+    width:min(900px,100%);
+    transition:transform .35s ease;
+}
+
+.content section:nth-child(1){
+    transform:translateY(0);
+}
+
+.content section:nth-child(2){
+    transform:translateY(0);
+}
+
+.content section:nth-child(3){
+    transform:translateY(0);
+}
+
+.content section:nth-child(4){
+    transform:translateY(0);
+}
+
+.content section:nth-child(5){
+    transform:translateY(0);
+}
+
+.content section:nth-child(6){
+    transform:translateY(0);
+}
+
+h3{
+    margin:0 0 4px;
+
+    font-weight:normal;
+}
+
+p{
+    margin:0;
+
+    line-height:1.4;
+}
+
+.wrap:hover .content section:nth-child(1),
+.wrap:active .content section:nth-child(1){
+    transform:translateY(0);
+}
+
+.wrap:hover .content section:nth-child(2),
+.wrap:active .content section:nth-child(2){
+    transform:translateY(80px);
+}
+
+.wrap:hover .content section:nth-child(3),
+.wrap:active .content section:nth-child(3){
+    transform:translateY(170px);
+}
+
+.wrap:hover .content section:nth-child(4),
+.wrap:active .content section:nth-child(4){
+    transform:translateY(330px);
+}
+
+.wrap:hover .content section:nth-child(5),
+.wrap:active .content section:nth-child(5){
+    transform:translateY(470px);
+}
+
+.wrap:hover .content section:nth-child(6),
+.wrap:active .content section:nth-child(6){
+    transform:translateY(580px);
+}
+
+@media (max-width:700px){
+
+h1{
+    font-size:40px;
+}
+
+h3{
+    font-size:24px;
+}
+
+p{
+    font-size:16px;
+}
+
+.wrap:active .content section:nth-child(2){
+    transform:translateY(90px);
+}
+
+.wrap:active .content section:nth-child(3){
+    transform:translateY(180px);
+}
+
+.wrap:active .content section:nth-child(4){
+    transform:translateY(360px);
+}
+
+.wrap:active .content section:nth-child(5){
+    transform:translateY(520px);
+}
+
+.wrap:active .content section:nth-child(6){
+    transform:translateY(650px);
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
-  <div class="nav">
-    <nav>
-      <a href="index.html">EN</a> |
-      <a href="de.html">DE</a>
-    </nav>
-  </div>
 
-  <h1>HTML Day Berlin 2026</h1>
+<div class="wrap">
 
-  <div class="content" onclick="this.classList.toggle('open')">
-    <section>
-      <h3>Wann?</h3>
-      <p>8. August 2026 (Samstag), 14:00–16:00 Uhr</p>
-    </section>
+<h1>HTML Day Berlin 2026</h1>
 
-    <section>
-      <h3>Wo?</h3>
-      <p>TBD</p>
-    </section>
+<div class="nav">
+<nav>
+<a href="index.html">EN</a> |
+<a href="de.html">DE</a>
+</nav>
+</div>
 
-    <section>
-      <h3>Was ist der HTML Day?</h3>
-      <p>
-        Der HTML Day ist eine jährliche Feier rund um HTML. An diesem Tag treffen
-        sich Menschen weltweit persönlich, um gemeinsam HTML zu schreiben und zu
-        lernen.
-      </p>
-    </section>
+<div class="content">
 
-    <section>
-      <h3>Was sollte ich mitbringen?</h3>
-      <p>
-        Etwas, womit du HTML schreiben kannst: einen Laptop, ein Smartphone oder Papier.
-      </p>
-    </section>
+<section>
+<h3>Wann?</h3>
+<p>8. August 2026 (Samstag), 14:00–16:00 Uhr</p>
+</section>
 
-    <section>
-      <h3>Wer kann teilnehmen?</h3>
-      <p>Alle sind willkommen – unabhängig von Alter oder Vorkenntnissen.</p>
-    </section>
+<section>
+<h3>Wo?</h3>
+<p>TBD</p>
+</section>
 
-    <section>
-      <h3>Nicht in Berlin?</h3>
-      <p>
-        Dann schau dir
-        <a href="https://2026.html.energy/" style="color: chartreuse;">HTML Day 2026</a>
-        in deiner Nähe an.
-      </p>
-    </section>
-  </div>
+<section>
+<h3>Was ist der HTML Day?</h3>
+<p>Der HTML Day ist eine jährliche Feier rund um HTML. An diesem Tag treffen sich Menschen weltweit persönlich, um gemeinsam HTML zu schreiben und zu lernen.</p>
+</section>
+
+<section>
+<h3>Was sollte ich mitbringen?</h3>
+<p>Etwas, womit du HTML schreiben kannst: einen Laptop, ein Smartphone oder Papier. Außerdem etwas zum Sitzen und vielleicht einen Snack sowie ein Getränk.</p>
+</section>
+
+<section>
+<h3>Wer kann teilnehmen?</h3>
+<p>Alle sind willkommen – unabhängig von Alter oder Vorkenntnissen.</p>
+</section>
+
+<section>
+<h3>Nicht in Berlin?</h3>
+<p>Dann schau dir <a href="https://2026.html.energy/" style="color:greenyellow;">HTML Day 2026</a> in deiner Nähe an.</p>
+</section>
+
+</div>
+
+</div>
+
 </body>
 </html>
