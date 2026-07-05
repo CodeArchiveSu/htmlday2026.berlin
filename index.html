@@ -5,25 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .nav {
-        position: fixed; 
-        left: 1rem;
-        bottom: 1rem;
+
+        a {
+            color: greenyellow;
         }
+    .html-logo span {
+  display: inline-block;
+  transform: translate(
+    calc(var(--i) * -2px),
+    calc(var(--i) * -5px)
+  );
+}
+
+
+.html-word {
+  position: relative;
+  width: 120px;   /* 필요한 만큼 */
+  height: 40px;   /* 필요한 만큼 */
+}
+
+.html-word span {
+  position: absolute;
+  font-size: 64px;
+}
+
+.html-word span:nth-child(1) { left: 0;  top: 0; }
+.html-word span:nth-child(2) { left: 35px; top: 12px; }
+.html-word span:nth-child(3) { left: 68px; top: 24px; }
+.html-word span:nth-child(4) { left: 100px; top: 36px; }
+
     </style>
 
 </head>
 <body>
 
-
-    <div class="nav">
+     <div class="nav">
         <nav>
             <a href="index.html" style="color: greenyellow;">EN</a> |
             <a href="de.html"  style="color: greenyellow;">DE</a>
         </nav>
     </div>
-
+    
  <h1>HTML Day Berlin 2026</h1>
+
 
 <h3>When?</h3>
 <p>August 8th Saturday 2026 2–4 PM</p>
@@ -33,17 +57,42 @@
 
 <h3>What is HTML Day?</h3>
 <p>
-HTML Day is an annual celebration of HTML. It's a day to gather IRL in places around the world to write and learn HTML.
+  <span class="html-logo">
+    <span style="--i:0">H</span>
+    <span style="--i:1">T</span>
+    <span style="--i:2">M</span>
+    <span style="--i:3">L</span>
+  </span>
+  Day is an annual celebration of   <span class="html-logo">
+    <span style="--i:0">H</span>
+    <span style="--i:1">T</span>
+    <span style="--i:2">M</span>
+    <span style="--i:3">L</span>
+  </span>. It's a day to gather IRL in places around the world to write and learn   <span class="html-logo">
+    <span style="--i:0">H</span>
+    <span style="--i:1">T</span>
+    <span style="--i:2">M</span>
+    <span style="--i:3">L</span>
+  </span>.
 </p>
+
 
 <h3>What to bring?</h3>
 <p>
-Something to write HTML on: laptop (fully charged), mobile phone, or paper.
+Something to write   <span class="html-logo">
+    <span style="--i:0">H</span>
+    <span style="--i:1">T</span>
+    <span style="--i:2">M</span>
+    <span style="--i:3">L</span>
+  </span> on: laptop (fully charged), mobile phone, or paper.
 Also something to sit on and maybe a snack and drink.
 </p>
 
 <h3>Who can join?</h3>
 <p>Anyone across all ages and skill levels.</p>
+
+<h3>Who is organizing?</h3>
+<p><a href="mailto:email.sukim@gmail.com">Su</a></p>
 
 <h3>Not in Berlin?</h3>
 <p>
