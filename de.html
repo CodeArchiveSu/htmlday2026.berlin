@@ -1,109 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Day Berlin 2026</title>
 
-<style>
-body {
-  margin: 0;
+    <style>
+        a {
+            color: greenyellow;
+        }
 
-  font-family: Georgia, "Times New Roman", serif;
-}
+        .html-logo span {
+            display: inline-block;
+            transform: translate(
+                calc(var(--i) * -2px),
+                calc(var(--i) * -5px)
+            );
+        }
+    </style>
 
-.card {
-    width:min(760px, calc(100vw - 32px));
-  height: 500px;
-  background: white;
-  padding: 16px 12px;
-  box-sizing: border-box;
-  position: relative;
-  cursor: pointer;
-  /* overflow: hidden; */
-}
-
-
-.line {
-  position: absolute;
-  left: 12px;
-  top: 16px;
-  width: 730px;
-  font-size: 14px;
-  line-height: 1.15;
-  color: black;
-
-  transform: translateY(0px);
-  transition: transform 0.8s cubic-bezier(.22, 1, .36, 1);
-}
-
-.title {
-  color: #00ee22;
-  font-size: 60px;
-}
-
-a{
-    font-size:clamp(18px, 5vw, 40px);
-    overflow-wrap:anywhere;
-}
-
-.thick {
-  font-weight: bold;
-  font-size: 16px;
-}
-</style>
 </head>
+<body>
 
-<body ontouchstart="">
+    <div class="nav">
+        <nav>
+            <a href="index.html">EN</a> |
+            <a href="de.html">DE</a>
+        </nav>
+    </div>
 
-<div class="card" id="card">
-  <!-- <div class="line"><a href="#">EN</a> | <a href="#">DE</a></div> -->
-  <div class="line"><h3>HTML Day Berlin 2026</div>
-  <div class="line thick">When?</div>
-  <div class="line ">August 8th Saturday 2026 2–4 PM</div>
-  <div class="line thick">Where?</div>
-  <div class="line">TBD will be added closer to the date.</div>
-  <div class="line thick">What is HTML Day?</div>
-  <div class="line">HTML Day is an annual celebration of HTML. It's a day to gather IRL in places around the world to write and learn HTML.</div>
-  <div class="line thick">What to bring?</div>
-  <div class="line">Something to write HTML on: laptop (fully charged), mobile phone, or paper. Also something to sit on and maybe a snack and drink.</div>
-  <div class="line thick">Who can join?</div>
-  <div class="line">Anyone who wants to write HTML. Beginners are very, very welcome!</div>
-  <div class="line thick">Who is organising?</div>
-  <div class="line">Organised by <a href="mailto:email.sukim@gmail.com">Su</a></div>
-  <div class="line thick">Not in Berlin?</div>
-  <div class="line">Check out <a href="#" class="title">HTML Day 2026</a></div>
-</div>
+    <h1>HTML Day Berlin 2026</h1>
 
-<script>
-const card = document.getElementById("card");
-const lines = [...card.querySelectorAll(".line")];
+    <h3>Wann?</h3>
+    <p>Samstag, 8. August 2026, 14:00–16:00 Uhr</p>
 
-function layout(open) {
-  let y = 0;
+    <h3>Wo?</h3>
+    <p>Wird noch bekannt gegeben.</p>
 
-  lines.forEach(line => {
-    if (open) {
-      line.style.transform = `translateY(${y}px)`;
-      y += line.offsetHeight;
-    } else {
-      line.style.transform = `translateY(0px)`;
-    }
-  });
-}
+    <h3>Was ist der HTML Day?</h3>
+    <p>
+        <span class="html-logo">
+            <span style="--i:0">H</span>
+            <span style="--i:1">T</span>
+            <span style="--i:2">M</span>
+            <span style="--i:3">L</span>
+        </span>
+        Day ist eine jährliche Feier rund um
+        <span class="html-logo">
+            <span style="--i:0">H</span>
+            <span style="--i:1">T</span>
+            <span style="--i:2">M</span>
+            <span style="--i:3">L</span>
+        </span>.
+        Menschen treffen sich weltweit persönlich, um gemeinsam
+        <span class="html-logo">
+            <span style="--i:0">H</span>
+            <span style="--i:1">T</span>
+            <span style="--i:2">M</span>
+            <span style="--i:3">L</span>
+        </span>
+        zu schreiben und zu lernen.
+    </p>
 
-layout(false);
+    <h3>Was sollte ich mitbringen?</h3>
+    <p>
+        Etwas, womit du
+        <span class="html-logo">
+            <span style="--i:0">H</span>
+            <span style="--i:1">T</span>
+            <span style="--i:2">M</span>
+            <span style="--i:3">L</span>
+        </span>
+        schreiben kannst: einen vollständig aufgeladenen Laptop,
+        ein Smartphone oder Papier.
+        Außerdem etwas zum Sitzen sowie gerne einen Snack und etwas zu trinken.
+    </p>
 
-card.addEventListener("mouseenter", () => layout(true));
-card.addEventListener("mouseleave", () => layout(false));
+    <h3>Wer kann teilnehmen?</h3>
+    <p>Alle – unabhängig von Alter oder Vorkenntnissen.</p>
 
-card.addEventListener("touchstart", () => layout(true));
-card.addEventListener("touchend", () => layout(false));
-card.addEventListener("touchcancel", () => layout(false));
+    <h3>Wer organisiert das?</h3>
+    <p><a href="mailto:email.sukim@gmail.com">Su</a></p>
 
-window.addEventListener("resize", () => {
-  if (card.matches(":hover")) layout(true);
-});
-</script>
+    <h3>Nicht in Berlin?</h3>
+    <p>
+        Schau dir
+        <a href="https://2026.html.energy/" style="color: chartreuse;">
+            HTML Day 2026
+        </a>
+        an.
+    </p>
 
 </body>
 </html>
